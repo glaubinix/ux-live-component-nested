@@ -1,0 +1,13 @@
+<div
+        {{ init_live_component(this) }}
+>
+    <p>
+        {% if this.isEdit %}
+            <input type="text" value="{{ this.label }}">
+            <a href="#" data-action="live#action" data-action-name="prevent|cancelEdit">Cancel</a>
+        {% else %}
+            {{ this.label }}
+            <a href="#" data-action="live#action" data-action-name="prevent|showEdit">Edit</a>
+        {% endif %}
+    </p>
+</div>

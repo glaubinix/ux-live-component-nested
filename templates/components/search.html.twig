@@ -1,0 +1,14 @@
+<div
+        {{ init_live_component(this) }}
+        data-action="change->live#update"
+>
+    <p>
+        {{ form(this.form) }}
+    </p>
+
+    {% for entry in this.entries %}
+        {{ component('edit', {
+            entry: entry
+        }) }}
+    {% endfor %}
+</div>
